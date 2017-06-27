@@ -61,7 +61,7 @@ class BabyItem(Base):
         }
 
 
-engine = create_engine('postgresql://catalog:catalog@35.160.122.180/lotsofbabies')
+engine = create_engine('postgresql://catalog:catalog@localhost/lotsofbabies')
 
 
 Base.metadata.create_all(engine)

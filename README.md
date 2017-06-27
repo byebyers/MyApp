@@ -128,7 +128,7 @@ Install Git using sudo apt-get install git
 Use cd /var/www to move to the /var/www/html directory
 Create the application directory sudo mkdir MyApp
 Move inside this directory using cd MyApp
-Clone the Catalog App to the virtual machine git clone https://github.com/RPMorganomous/catalog.git
+Clone the Catalog App to the virtual machine git clone https://github.com/byebyers/MyApp.git
 Rename the project's name sudo mv ./catalog ./MyApp
 Move to the inner MyApp directory using cd MyApp
 Rename project.py to __init__.py using sudo mv project.py __init__.py
