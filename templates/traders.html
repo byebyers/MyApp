@@ -1,0 +1,43 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row banner main">
+	</div>
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+	
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-10 padding-none">
+			<a href="{{url_for('newTrader')}}">
+				<button class="btn btn-default" id="new-trader">
+					<span class="glyphicon glyphicon-user"></span>Add Trader
+				</button>
+			</a>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="row">
+	{% for trader in traders %}
+		<a href = "{{url_for('showBaby', trader_id = trader.id)}}">
+			<div >
+				<div class="col-md-3 thumbnail trader-list">
+					<img src="{{trader.image}}" width="200" class="img-responsive center-block">
+					<h3>{{trader.name}}</h3>
+				</div>
+			</div>
+		</a>
+	{% endfor %}
+	</div>
+{% endblock %}
